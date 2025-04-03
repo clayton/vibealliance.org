@@ -3,43 +3,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIBE ALLIANCE</title>
+    <title>VIBE ALLIANCE - AI-First Product Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="application.css" rel="stylesheet"> <!-- Adjusted path -->
+    <link href="application.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         body {
             background-color: #111827; /* Tailwind gray-900 */
             color: #f3f4f6; /* Tailwind gray-100 */
         }
+        .gradient-text {
+            @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+        }
+        .animated-gradient {
+            background-size: 300% 300%;
+            animation: gradient-shift 8s ease infinite;
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        .btn-primary {
+            @apply px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-purple-500/30;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg border border-purple-500 transition-all duration-200 hover:bg-gray-700;
+        }
+        .card {
+            @apply bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-200;
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center font-exo">
+<body class="min-h-screen flex flex-col font-sans text-gray-100">
+    <!-- Navigation -->
+    <nav class="py-4 px-6 md:px-12 flex justify-between items-center border-b border-gray-800">
+        <div class="flex items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text animated-gradient">VIBE ALLIANCE</a>
+        </div>
+        <div class="hidden md:flex space-x-8 text-gray-300">
+            <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+            <a href="certifications.html" class="hover:text-purple-400 transition-colors">Certifications</a>
+            <a href="events.html" class="hover:text-purple-400 transition-colors">Events</a>
+            <a href="resources.html" class="hover:text-purple-400 transition-colors">Resources</a>
+            <a href="community.html" class="hover:text-purple-400 transition-colors">Community</a>
+        </div>
+        <div class="hidden md:block">
+            <a href="#contact" class="btn-primary">Join the Movement</a>
+        </div>
+        <button class="md:hidden text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
 
-    <main class="text-center p-8">
-        <h1 class="text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-4">
-            VIBE ALLIANCE
-        </h1>
-
-        <h2 class="text-2xl text-gray-300 mb-12">
-            Velocity, Innovation, and Bold Execution
-        </h2>
-
-        <p class="text-lg text-gray-400 max-w-xl mx-auto">
-            Embark on a new journey. Build and deliver products with speed, excellence, and innovation. And do it without bloated teams.
+    <!-- Hero Section -->
+    <header class="py-20 px-6 md:px-12 flex flex-col items-center justify-center text-center">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 gradient-text animated-gradient">VIBE ALLIANCE</h1>
+        <h2 class="text-2xl md:text-4xl font-bold mb-8 gradient-text animated-gradient">AI-FIRST PRODUCT DEVELOPMENT</h2>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl">
+            The global community shaping how organizations build and scale AI-powered products
         </p>
-    </main>
+        <div class="mt-12 space-x-4">
+            <a href="#about" class="btn-primary">Learn More</a>
+            <a href="#contact" class="btn-secondary">Join Us</a>
+        </div>
+    </header>
 
-    <!-- Optional: Add a simple footer -->
-    <!-- 
-    <footer class="mt-auto text-center p-4 text-gray-500 text-sm">
-        &copy; 2024 VIBE ALLIANCE
-    </footer> 
-    -->
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 md:px-12 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">What We Do</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="card flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Define Standards</h3>
+                    <p class="text-gray-400">
+                        We create practical frameworks that help teams integrate AI throughout the product development lifecycle.
+                    </p>
+                </div>
+                
+                <div class="card flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Build Expertise</h3>
+                    <p class="text-gray-400">
+                        Our certification programs and training resources help professionals master AI-first methodologies.
+                    </p>
+                </div>
+                
+                <div class="card flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Grow Community</h3>
+                    <p class="text-gray-400">
+                        Our global network of practitioners shares knowledge and best practices through events and forums.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- If you have an index.js for Alpine later -->
-    <!-- <script src="index.js"></script> --> <!-- Adjusted path -->
+    <!-- Value Props Section -->
+    <section class="py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold mb-6 text-center">Why AI-First Matters</h2>
+                <p class="text-center text-gray-400 max-w-3xl mx-auto">
+                    Organizations that adopt AI-first methodologies experience:
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-purple-400 text-2xl font-bold">1</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Faster Time to Market</h3>
+                        <p class="text-gray-400 mb-3">
+                            Reduce development cycles by 35-40% by leveraging AI for prototyping, testing, and code generation.
+                        </p>
+                        <p class="text-gray-500 text-sm italic">
+                            "Our product iterations are now measured in days rather than weeks." — Director of Product, Fortune 100 Tech Company
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-pink-400 text-2xl font-bold">2</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Higher Innovation Output</h3>
+                        <p class="text-gray-400 mb-3">
+                            Teams produce 3x more viable product concepts when AI is integrated throughout ideation and prototyping.
+                        </p>
+                        <p class="text-gray-500 text-sm italic">
+                            "We're exploring product directions that weren't even on our roadmap before." — SVP Innovation, Global Manufacturing
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-red-400 text-2xl font-bold">3</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Better Resource Allocation</h3>
+                        <p class="text-gray-400 mb-3">
+                            AI-assisted prioritization helps teams focus on high-impact features, reducing waste by up to 60%.
+                        </p>
+                        <p class="text-gray-500 text-sm italic">
+                            "We've eliminated months of work on features our users don't actually want." — CPO, SaaS Platform
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-purple-400 text-2xl font-bold">4</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Improved Product Quality</h3>
+                        <p class="text-gray-400 mb-3">
+                            AI testing and quality assurance catches 2.8x more issues before release, increasing customer satisfaction.
+                        </p>
+                        <p class="text-gray-500 text-sm italic">
+                            "Our NPS scores have improved by 18 points since implementing AI quality assurance." — CTO, FinTech Startup
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="resources.html" class="btn-primary">Explore Our Methods</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Paths Preview -->
+    <section class="py-16 px-6 md:px-12 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Certification Paths</h2>
+            <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+                Build your expertise in AI-first methodologies with our industry-recognized certification program
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">AI-First Product Manager</h3>
+                    <p class="text-gray-400 mb-6">
+                        Master the skills to lead product development with AI at the center of your strategy and execution.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">AI-powered user research</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">LLM-assisted prioritization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">AI roadmap planning</span>
+                        </div>
+                    </div>
+                    <a href="certifications.html" class="btn-secondary w-full text-center">Learn More</a>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">AI-First Engineer</h3>
+                    <p class="text-gray-400 mb-6">
+                        Develop the expertise to build AI-powered features and products that deliver exceptional value.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">Responsible AI integration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">Generative AI architecture</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">AI testing & QA practices</span>
+                        </div>
+                    </div>
+                    <a href="certifications.html" class="btn-secondary w-full text-center">Learn More</a>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">AI-First Design Lead</h3>
+                    <p class="text-gray-400 mb-6">
+                        Create exceptional user experiences by collaborating with AI in the design process.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">AI-augmented design systems</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">Human-AI interaction patterns</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-300">Gen AI prototyping workflows</span>
+                        </div>
+                    </div>
+                    <a href="certifications.html" class="btn-secondary w-full text-center">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Preview -->
+    <section class="py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Upcoming Events</h2>
+            <p class="text-center text-gray-400 max-w-3xl mx-auto mb-12">
+                Connect with the global AI-first community through our conferences, workshops, and meetups
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="card">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex flex-col items-center justify-center text-white mr-4 flex-shrink-0">
+                            <span class="text-sm font-bold">MAY</span>
+                            <span class="text-2xl font-bold">15</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">AI-First Summit 2025</h3>
+                            <p class="text-gray-400 mb-3">San Francisco, CA + Virtual</p>
+                            <p class="text-gray-500 mb-4">
+                                Our flagship conference with 30+ speakers, workshops, and networking opportunities.
+                            </p>
+                            <a href="events.html" class="text-purple-400 hover:text-purple-300">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="flex items-start">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl flex flex-col items-center justify-center text-white mr-4 flex-shrink-0">
+                            <span class="text-sm font-bold">JUN</span>
+                            <span class="text-2xl font-bold">08</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">AI-First Product Workshop</h3>
+                            <p class="text-gray-400 mb-3">Virtual Event</p>
+                            <p class="text-gray-500 mb-4">
+                                Hands-on training for product teams looking to implement AI-first methodologies.
+                            </p>
+                            <a href="events.html" class="text-purple-400 hover:text-purple-300">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="events.html" class="btn-primary">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community -->
+    <section class="py-16 px-6 md:px-12 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:flex items-center justify-between mb-8">
+                <div class="max-w-2xl mb-6 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Join Our Community</h2>
+                    <p class="text-gray-400">
+                        Connect with 20,000+ practitioners worldwide, share knowledge, and shape the future of AI-first product development.
+                    </p>
+                </div>
+                <div>
+                    <a href="community.html" class="btn-primary">Find Your People</a>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Local Meetups</h3>
+                    <p class="text-gray-400">
+                        Over 120 user groups in 35 countries host regular in-person gatherings.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Online Forums</h3>
+                    <p class="text-gray-400">
+                        Our community platform hosts discussions on best practices, tools, and implementation.
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Knowledge Sharing</h3>
+                    <p class="text-gray-400">
+                        Access case studies, templates, and implementation toolkits from practitioners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-6 md:px-12">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 gradient-text animated-gradient">Ready to Transform Your Product Development?</h2>
+            <p class="text-gray-400 mb-8">
+                Subscribe to our newsletter to stay updated on AI-first methodologies, events, and resources.
+            </p>
+            <form class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Your email address" class="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent flex-grow">
+                <button type="submit" class="btn-primary whitespace-nowrap">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-12 px-6 md:px-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4 gradient-text">VIBE ALLIANCE</h3>
+                <p class="text-gray-400 mb-4">Accelerating product development through AI-first methodologies that actually work.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-purple-400">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.21c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Resources</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="resources.html" class="hover:text-purple-400">AI-First Playbook</a></li>
+                    <li><a href="certifications.html" class="hover:text-purple-400">Certification Paths</a></li>
+                    <li><a href="resources.html" class="hover:text-purple-400">Case Studies</a></li>
+                    <li><a href="resources.html" class="hover:text-purple-400">White Papers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Community</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="community.html" class="hover:text-purple-400">Find a User Group</a></li>
+                    <li><a href="events.html" class="hover:text-purple-400">Events Calendar</a></li>
+                    <li><a href="community.html" class="hover:text-purple-400">Forums</a></li>
+                    <li><a href="#" class="hover:text-purple-400">Newsletter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-purple-400">About Us</a></li>
+                    <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+                    <li><a href="#" class="hover:text-purple-400">Careers</a></li>
+                    <li><a href="#" class="hover:text-purple-400">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            &copy; 2025 VIBE ALLIANCE. All rights reserved.
+        </div>
+    </footer>
 </body>
 </html> 
